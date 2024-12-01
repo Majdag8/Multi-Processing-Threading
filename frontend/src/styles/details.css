@@ -1,0 +1,66 @@
+/* General Styles */
+.details {
+    padding: 2em;
+    background: linear-gradient(135deg, #e3f2fd, #fbe9e7); /* Light gradient */
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .details h2 {
+    font-size: 2.5rem;
+    color: #37474f; /* Dark slate */
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Container for cards */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em; /* Adds spacing between cards */
+  }
+  
+  /* Card Styling */
+  .detail-card {
+    background: #ffffff;
+    border: 2px solid #37474f; /* Accent border */
+    border-radius: 15px;
+    padding: 1.5em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 45%; /* Adjusts card size and responsiveness */
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .detail-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Title */
+  .detail-card h3 {
+    font-size: 1.8rem;
+    color: #0288d1; /* Vibrant blue */
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #0288d1;
+    display: inline-block;
+    padding-bottom: 0.3em;
+  }
+  
+  /* JSON Data */
+  .detail-card pre {
+    background: #eceff1; /* Light gray background */
+    border-radius: 10px;
+    padding: 1em;
+    color: #37474f; /* Text color */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    margin-top: 1em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  

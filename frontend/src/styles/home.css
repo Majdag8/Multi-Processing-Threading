@@ -1,0 +1,86 @@
+/* General Styles */
+.home {
+    padding: 2em;
+    text-align: center;
+    background-color: #b8aadf;
+  }
+  
+  .welcome_header {
+    font-size: 2.5rem;
+    color: #5e35b1; 
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .welcome_parag {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2em;
+  }
+  
+  /* Description Section */
+  .description-section {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 2em 0;
+    background: linear-gradient(135deg, #e3f2fd, #ede7f6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+  }
+  
+  /* Description Cards */
+  .description-card {
+    background-color: #ffffff;
+    /* border: 1px solid #5e35b1;  */
+    border-radius: 15px;
+    width: 420px;
+    height: 500px;
+    padding: 1.5em;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .description-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .description-title {
+    font-size: 1.8rem;
+    color: #5e35b1;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #5e35b1;
+    display: inline-block;
+  }
+  
+  .description-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+  
+  /* Benefits List */
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .benefits-list li {
+    position: relative;
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+    color: #333;
+  }
+  
+  .benefits-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #5e35b1;
+    font-weight: bold;
+  }
+  
