@@ -1,8 +1,12 @@
 /* General Styles */
 .home {
-    padding: 2em;
+    padding: 3em;
     text-align: center;
     background-color: #b8aadf;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+ 
   }
   
   .welcome_header {
@@ -16,12 +20,20 @@
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 2em;
+    background-color: #FFF;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5e35b1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   /* Description Section */
   .description-section {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 2em;
     flex-wrap: wrap;
     padding: 2em 0;
@@ -40,6 +52,7 @@
     padding: 1.5em;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
   }
   
   .description-card:hover {
@@ -83,4 +96,76 @@
     color: #5e35b1;
     font-weight: bold;
   }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+  }
   
+  .description-card.flipped .card-inner {
+    transform: rotateY(180deg); /* Rotate card when flipped */
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Front of the card */
+  .card-front {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Back of the card (default styles) */
+  .card-back {
+    background-size: contain;
+    background-position: center;
+    color: #ffffff;
+    transform: rotateY(180deg); /* Rotate back face */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Specific backgrounds for each card */
+  .card-back.threading {
+    background-image: url('../../public/Threading.png'); 
+  }
+  
+  .card-back.processing {
+    background-image: url('../../public/Processing.png'); 
+  }
+  
+  /* Optional: Button styles */
+  .flip-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #5e35b1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .flip-button:hover {
+    background-color: #3c1a84;
+  }
+
+ 

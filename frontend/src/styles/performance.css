@@ -4,8 +4,9 @@
 }
 
 .description {
-  margin: 10px 0;
+  margin: 15px 0 40px;
   color: #666;
+  font-size: 1.2rem;
 }
 
 .cards-container {
@@ -16,12 +17,18 @@
 }
 
 .performance-card {
-  width: 300px;
+  width: 350px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
+  transition:  .3s ease;
+}
+
+.performance-card:hover {
+ transition:  .3s ease;
+ transform: scale(1.05);
 }
 
 .card-title {
