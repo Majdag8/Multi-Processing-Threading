@@ -1,5 +1,4 @@
 import React from 'react';
-// import './ComparisonTable.css';
 
 function ComparisonTable({ data }) {
   return (

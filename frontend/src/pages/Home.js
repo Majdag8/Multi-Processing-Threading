@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../styles/home.css';
 
 function Home() {
-  const [flippedCards, setFlippedCards] = useState({}); // Object to track flipped state for each card
+  const [flippedCards, setFlippedCards] = useState({}); 
 
   const toggleFlip = (cardId) => {
     setFlippedCards((prevState) => ({
       ...prevState,
-      [cardId]: !prevState[cardId], // Toggle flipped state for the specific card
+      [cardId]: !prevState[cardId],
     }));
   };
 
@@ -39,7 +39,7 @@ function Home() {
               </ul>
             </div>
             <div className="card-back threading">
-              {/* Add content or styles for the back */}
+              {/* content or styles for the back */}
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ function Home() {
               </ul>
             </div>
             <div className="card-back processing">
-              {/* Add content or styles for the back */}
+              {/* content or styles for the back */}
             </div>
           </div>
         </div>

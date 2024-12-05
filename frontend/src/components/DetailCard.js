@@ -1,5 +1,4 @@
 import React from 'react';
-// import './DetailCard.css';
 
 function DetailCard({ data, title }) {
   return (

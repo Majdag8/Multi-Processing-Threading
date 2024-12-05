@@ -1,36 +1,35 @@
-/* General Styles */
 .details {
     padding: 2em;
-    background: linear-gradient(135deg, #e3f2fd, #fbe9e7); /* Light gradient */
+    background: linear-gradient(135deg, #e3f2fd, #e1bee7);
     min-height: 100vh;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
   }
   
-  /* Heading */
   .details h2 {
     font-size: 2.5rem;
-    color: #37474f; /* Dark slate */
+    color: #37474f; 
+    font-weight: normal;
     margin-bottom: 1em;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  }
+    animation: fadeIn 1s ease-in-out;
+}
   
-  /* Container for cards */
   .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3em; /* Adds spacing between cards */
+    gap: 3em; 
   }
   
-  /* Card Styling */
   .detail-card {
     background: #ffffff;
-    border: 2px solid #37474f; /* Accent border */
+    border: 2px solid #37474f; 
     border-radius: 15px;
     padding: 1.5em;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 45%; /* Adjusts card size and responsiveness */
+    flex: 1 1 45%; 
     max-width: 600px;
     text-align: left;
   }
@@ -40,22 +39,21 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   }
   
-  /* Title */
   .detail-card h3 {
     font-size: 1.8rem;
-    color: #0288d1; /* Vibrant blue */
+    color: #0288d1; 
     margin-bottom: 0.5em;
     border-bottom: 2px solid #0288d1;
     display: inline-block;
     padding-bottom: 0.3em;
   }
-  
+
   /* JSON Data */
   .detail-card pre {
-    background: #eceff1; /* Light gray background */
+    background: #eceff1; 
     border-radius: 10px;
     padding: 1em;
-    color: #37474f; /* Text color */
+    color: #37474f; 
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
     overflow-x: auto;

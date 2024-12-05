@@ -1,65 +1,135 @@
 .performance-comparison {
-  padding: 20px;
+  padding: 100px;
   text-align: center;
+  background: #f9f9f9; 
+  animation: slideIn 1.5s ease-out;
+  background: linear-gradient(135deg, #e3f2fd, #e1bee7);
+  height: 100%;
+  width: 100%;
 }
 
 .description {
   margin: 15px 0 40px;
   color: #666;
   font-size: 1.2rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideIn 1.5s ease-out;
+}
+
+header h1{
+  font-weight: normal;
 }
 
 .cards-container {
   display: flex;
   justify-content: center;
+  font-weight: normal;
   gap: 20px;
   flex-wrap: wrap;
+  animation: slideIn 1.5s ease-out;
 }
 
 .performance-card {
-  width: 350px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), inset 0 -2px 4px rgba(0, 0, 0, 0.05); 
   text-align: left;
-  transition:  .3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 1.5s ease-out;
 }
 
 .performance-card:hover {
- transition:  .3s ease;
- transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), inset 0 -3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 2rem;
+  color: #673ab7;
+  margin-left: 60px;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #673ab7;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
 }
 
 .metric {
-  margin: 10px 0;
+  margin: 15px 0;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3); 
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.3s ease;
+  text-align: center; 
+}
+
+.metric:hover {
+  background: #ffffff; 
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .metric h4 {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.1rem;
+  color: #673ab7; 
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em; 
+  text-transform: uppercase; 
 }
 
 .metric p {
-  font-size: 1.2rem;
-  color: #000;
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: normal; 
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); 
 }
 
-.error-text, .loading-text {
-  color: red;
+.loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  color: #5e35b1;
+}
+
+.loading-circle {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e0e0e0;
+  border-top: 3px solid #5e35b1; 
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .error-card {
   background-color: #f8d7da;
   color: #721c24;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #f5c6cb;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto; 
 }

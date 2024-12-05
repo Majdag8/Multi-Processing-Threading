@@ -10,7 +10,7 @@ function PerformanceComparison() {
   useEffect(() => {
     axiosInstance.get('/performance')
       .then(response => {
-        console.log('API Response:', response.data); // Debug response
+        console.log('API Response:', response.data);
         setPerformanceData(response.data || {});
       })
       .catch(error => {
@@ -30,14 +30,18 @@ function PerformanceComparison() {
       <div className="cards-container">
         {error ? (
           <p className="error-text">{error}</p>
+        ) : performanceData && Object.keys(performanceData).length === 0 ? (
+          <p className="error-text">No performance data available.</p>
         ) : performanceData ? (
           <>
-            {/* Pass the correct data to each PerformanceCard */}
             <PerformanceCard title="Multi-threading" data={performanceData.threading_result} />
             <PerformanceCard title="Multi-processing" data={performanceData.multiprocessing_result} />
           </>
         ) : (
-          <p className="loading-text">Loading performance data...</p>
+          <div className="loading-text">
+            <div className="loading-circle"></div>
+            Loading performance data...
+          </div>
         )}
       </div>
     </div>
